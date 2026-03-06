@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prince Traders</title>
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Firebase SDK (v9 compat) with Auth + Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <link rel="stylesheet" href="prince.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Prince Traders</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <h1>Premium Interior </h1>
+        <p>Windows | Doors | Home Interiors | Curtains</p>
+        <button onclick="scrollToSection('contact')">Contact Us</button>
+    </section>
+
+    <!-- Services - category strips -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+
+        <div class="service-category">
+            <h3><i class="" style="margin-right: 10px;"></i> UPVC Windows</h3>
+            <div class="scroll-container">
+                <div class="service-card"><img src="/image/demo 1.jpg">
+                    <p>Sliding Window</p>
+                </div>
+                <div class="service-card"><img src="image/open window.jpg" alt="Casement Window">
+                    <p>Open Window</p>
+                </div>
+                <div class="service-card"><img src="image/mis windows.jpeg" alt="Bay Window">
+                    <p>misquito Window</p>
+                </div>
+                <div class="service-card"><img src="image/upvc doors.jpg" alt="Tilt and Turn">
+                    <p>doors</p>
+                </div>
+                <div class="service-card"><img src="image/kichen windows.jpg" alt="Folding Window">
+                    <p>kichen Window</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category">
+            <h3><i class="" style="margin-right: 10px;"></i> PVC Workes </h3>
+            <div class="scroll-container">
+                <div class="service-card"><img src="image/bathroom doors.jpg" alt="Folding Door">
+                    <p>Bathroom Door</p>
+                </div>
+                <div class="service-card"><img src="image/wall.jpeg" alt="Sliding Door">
+                    <p>Wall Door</p>
+                </div>
+                <div class="service-card"><img src="image/tv.jpg" alt="French Door">
+                    <p>Tv panel </p>
+                </div>
+                <div class="service-card"><img src="image/False ceiling.jpg" alt="Side Panel">
+                    <p>False ceiling</p>
+                </div>
+                <div class="service-card"><img src="image/side panel.jpg" alt="Bi-fold Door">
+                    <p>Side Panel</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category">
+            <h3><i class="" style="margin-right: 10px;"></i> Home Interior</h3>
+            <div class="scroll-container">
+                <div class="service-card"><img src="image/Modern Ceiling.jpg" alt="Modern Ceiling">
+                    <p>Modern Ceiling</p>
+                </div>
+                <div class="service-card"><img src="image/Bedroom Wardrobe.jpg" alt="Bedroom Wardrobe">
+                    <p>Bedroom Wardrobe</p>
+                </div>
+                <div class="service-card"><img src="image/Modular Kitchen.jpg" alt="Modular Kitchen">
+                    <p>Modular Kitchen</p>
+                </div>
+                <div class="service-card"><img src="image/Cupboard Design.jpg" alt="Cupboard">
+                    <p>Cupboard Design</p>
+                </div>
+                <div class="service-card"><img src="image/TV Unit.jpg" alt="TV Unit">
+                    <p>TV Unit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category">
+            <h3><i class="" style="margin-right: 10px;"></i> Curtains & Blinds</h3>
+            <div class="scroll-container">
+                <div class="service-card"><img src="image/Velvet Curtains.jpg" alt="Velvet Curtains">
+                    <p>Velvet Curtains</p>
+                </div>
+                <div class="service-card"><img src="image/Roman Blinds.jpg" alt="Sheer Curtains">
+                    <p>Sheer Curtains</p>
+                </div>
+                <div class="service-card"><img src="image/Vertical Blinds.jpg" alt="Vertical Blinds">
+                    <p>Vertical Blinds</p>
+                </div>
+                <div class="service-card"><img src="image/Roman Blinds.jpg" alt="Roman Blinds">
+                    <p>Roman Blinds</p>
+                </div>
+                <div class="service-card"><img src="image/Roller Blinds.jpg" alt="Roller Blinds">
+                    <p>Roller Blinds</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-strip">
+            <h3><i class="" style="margin-right: 10px;"></i> Recent Projects</h3>
+            <div class="scroll-container">
+                <div class="service-card"><img src="image/download (2).jpg" alt="Modern door">
+                    <p>TV showcase</p>
+                </div>
+                <div class="service-card"><img src="image/side panel.jpg" alt="Curtains">
+                    <p>Side Panel</p>
+                </div>
+                <div class="service-card"><img src="image/Modular Kitchen.jpg" alt="Kitchen interior">
+                    <p>Modular Kitchen</p>
+                </div>
+                <div class="service-card"><img src="image/UPVC Window.jpg" alt="Window design">
+                    <p>UPVC Window</p>
+                </div>
+                <div class="service-card"><img src="image/Bedroom Interior.jpg" alt="Bedroom">
+                    <p>Bedroom Interior</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="image/shop img.jpeg" alt="Interior">
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>At <strong>Prince Traders</strong>,Prince Traders offers premium UPVC windows, doors, interiors, and
+                    mosquito net solutions with over a decade of experience. We specialize in pleated, roll-up, and
+                    Velcro nets, along with stylish modular interiors and curtains. With 500+ happy customers, we
+                    deliver durable, sustainable, and high-quality solutions that enhance modern living spaces 26 years
+                    experience.</p>
+                <p><i class="fas fa-leaf" style="color:#0a8f3d;"></i> Sustainable · <i class="fas fa-trophy"
+                        style="color:#0a8f3d;"></i> 500+ happy customers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews (dynamically loaded from Firebase) -->
+    <section id="reviews" class="reviews">
+        <h2><i class="fas fa-star" style="margin-right: 10px;"></i> Customer Reviews</h2>
+        <div class="reviews-grid" id="reviewsGrid">
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px;" id="loadingReviews">Loading reviews...
+            </div>
+        </div>
+        <button class="add-review-btn" onclick="openReviewModal()"><i class="fas fa-plus-circle"></i> Add
+            Review</button>
+    </section>
+
+    <!-- Contact card -->
+    <section id="contact" class="contact">
+        <div class="contact-card">
+            <div class="contact-bg"></div>
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-phone-alt"></i>+91 98427 46825</p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/+91 98427 46825" target="_blank">Chat on
+                        WhatsApp</a></p>
+                <p><i class="fab fa-instagram"></i> <a
+                        href="https://www.instagram.com/princetraders98427/">princetraders</a></p>
+                <p><i class="fas fa-map-marker-alt"></i>modachur, Gobichettipalayam, Tamil Nadu</p>
+                <p><i class="fas fa-envelope"></i> info@princetraders.in</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp button -->
+    <a href="https://wa.me/+91 98427 46825" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>© 2026 Prince Traders · All Rights Reserved</p>
+    </footer>
+
+    <!-- REVIEW FORM MODAL (with Google Sign-In, star rating) -->
+    <div id="reviewModal" class="modal" onclick="if(event.target === this) closeReviewModal()">
+        <div class="modal-content">
+            <h3><i class="fas fa-pen" style="margin-right: 10px;"></i> Write a Review</h3>
+
+            <!-- Signed-out state (Google Sign-In) -->
+            <div id="googleSignInDiv" style="display: block;">
+                <p style="margin-bottom: 15px;">Sign in with Google to post a review:</p>
+                <button class="google-signin-btn" onclick="signInWithGoogle()">
+                    <img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" alt="Google logo">
+                    Sign in with Google
+                </button>
+                <div id="googleSignInError" class="error-message" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span id="googleErrorText"></span>
+                </div>
+            </div>
+
+            <!-- Signed-in state (review form) -->
+            <div id="reviewFormDiv" style="display: none;">
+                <div class="user-badge" id="userBadge"></div>
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="star-rating" id="starRating">
+                        <input type="radio" name="rating" id="star5" value="5"><label for="star5"
+                            title="5 stars">★</label>
+                        <input type="radio" name="rating" id="star4" value="4"><label for="star4"
+                            title="4 stars">★</label>
+                        <input type="radio" name="rating" id="star3" value="3"><label for="star3"
+                            title="3 stars">★</label>
+                        <input type="radio" name="rating" id="star2" value="2"><label for="star2"
+                            title="2 stars">★</label>
+                        <input type="radio" name="rating" id="star1" value="1"><label for="star1"
+                            title="1 star">★</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Your Review</label>
+                    <textarea id="reviewText" placeholder="Tell us about your experience..." rows="4"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-cancel" onclick="closeReviewModal()">Cancel</button>
+                    <button class="btn-submit" onclick="submitReview()">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="env.js"></script>
+    <script src="prince.js"></script>
+    <!-- 
+    Firestore rules suggestion:
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /reviews/{review} {
+          allow read: if true;
+          allow create: if request.auth != null;
+          allow update: if request.auth != null && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes']);
+          match /replies/{reply} {
+            allow read: if true;
+            allow create: if request.auth != null;
+            allow update: if request.auth != null && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes']);
+          }
+        }
+      }
+    }
+-->
+</body>
+
+</html>
